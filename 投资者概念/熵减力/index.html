@@ -1,0 +1,5966 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E6%BF%80%E5%8A%B1%E6%9C%BA%E5%88%B6/">
+      
+      
+        <link rel="next" href="../%E7%88%B1%E7%9A%84%E5%80%BE%E5%90%91/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>熵减力 - 我的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="我的知识库" class="md-header__button md-logo" aria-label="我的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            我的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              熵减力
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to MkDocs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E5%85%AC%E5%8F%B8%E5%90%8D%E5%BD%95/%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90/" class="md-tabs__link">
+          
+  
+  
+  公司名录
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/2.5%E6%96%87%E6%98%8E%E9%98%B6%E6%AE%B5/" class="md-tabs__link">
+          
+  
+  
+  其他概念
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E4%B8%89%E5%90%88%E4%B8%80%E5%B8%82%E5%9C%BA%E6%9C%BA%E5%88%B6/" class="md-tabs__link">
+          
+  
+  
+  商业概念
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/2%C3%974%E6%B5%8B%E8%AF%95%E6%B3%95/" class="md-tabs__link">
+          
+  
+  
+  投资概念
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../PDCA%E7%AE%A1%E7%90%86%E5%BE%AA%E7%8E%AF/" class="md-tabs__link">
+          
+  
+  
+  投资者概念
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E7%9F%A5%E5%90%8D%E6%8A%95%E8%B5%84%E4%BA%BA/%E5%A1%94%E5%8B%92%E5%B8%83/" class="md-tabs__link">
+          
+  
+  
+  知名投资人
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/ROE%E4%B8%8EROIC/" class="md-tabs__link">
+          
+  
+  
+  财务概念
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="我的知识库" class="md-nav__button md-logo" aria-label="我的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    我的知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    公司名录
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    公司名录
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%AC%E5%8F%B8%E5%90%8D%E5%BD%95/%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    可口可乐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%AC%E5%8F%B8%E5%90%8D%E5%BD%95/%E8%8B%B9%E6%9E%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    苹果
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%AC%E5%8F%B8%E5%90%8D%E5%BD%95/%E8%8C%85%E5%8F%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    茅台
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他概念
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    其他概念
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/2.5%E6%96%87%E6%98%8E%E9%98%B6%E6%AE%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5文明阶段
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/%E4%BF%A1%E7%94%A8%E4%BD%93%E7%B3%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信用体系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/%E5%88%98%E6%98%93%E6%96%AF%E6%8B%90%E7%82%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    刘易斯拐点
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/%E5%A4%8D%E6%9D%82%E6%80%A7%E7%90%86%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复杂性理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%BA%A2%E5%88%A9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工程师红利
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/%E5%BF%83%E4%B9%8B%E5%9B%9B%E5%8A%9B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    心之四力
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/%E5%BF%83%E7%94%9F%E4%B8%87%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    心生万法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/%E6%94%BF%E6%B2%BB%E8%B4%A4%E8%83%BD%E5%88%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    政治贤能制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/%E6%96%87%E6%98%8E%E4%B8%89%E9%98%B6%E6%AE%B5%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文明三阶段论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/%E7%A9%BA%E6%80%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    空性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/%E7%BB%8F%E6%B5%8E%E8%B4%A4%E8%83%BD%E5%88%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    经济贤能制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96%E6%A6%82%E5%BF%B5/%E9%A9%AC%E5%B0%94%E8%90%A8%E6%96%AF%E9%99%B7%E9%98%B1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    马尔萨斯陷阱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    商业概念
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    商业概念
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E4%B8%89%E5%90%88%E4%B8%80%E5%B8%82%E5%9C%BA%E6%9C%BA%E5%88%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    三合一市场机制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E4%B8%8A%E7%98%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    上瘾模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E4%BC%81%E4%B8%9A%E6%96%87%E5%8C%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    企业文化（Corporate Culture）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E5%85%AC%E5%8F%B8%E6%B2%BB%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    公司治理（Corporate Governance）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E5%85%B1%E8%B5%A2%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    共赢商业模式（Win-Win Business Model）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E5%93%81%E7%89%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    品牌（Brand Power）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    商业模式（Business Model）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E5%95%86%E8%AA%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    商誉（Goodwill）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E5%A2%9E%E9%95%BF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    增长
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E5%A4%8D%E5%88%A9%E6%9C%BA%E5%99%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复利机器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E5%AE%9A%E4%BD%8D%E7%90%86%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    定位理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E6%94%B6%E8%B4%AD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    收购（Acquisition Criteria）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E6%9C%AC%E5%88%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    本分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E6%B8%97%E9%80%8F%E7%8E%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    渗透率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E7%89%B9%E8%AE%B8%E7%BB%8F%E8%90%A5%E6%9D%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    特许经营权（Franchise）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E7%AB%9E%E4%BA%89%E4%BC%98%E5%8A%BF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    竞争优势（Competitive Advantage）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E7%AB%9E%E4%BA%89%E6%A0%BC%E5%B1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    竞争格局
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E7%AE%A1%E7%90%86%E5%B1%82/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    管理层（Management Quality）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E7%BD%91%E7%BB%9C%E6%95%88%E5%BA%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络效应
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E8%82%A1%E4%B8%9C%E5%AF%BC%E5%90%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    股东导向（Shareholder Orientation）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E8%AF%9A%E4%BF%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    诚信（Integrity）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E8%B5%84%E6%9C%AC%E9%85%8D%E7%BD%AE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    资本配置（Capital Allocation）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    投资概念
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    投资概念
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/2%C3%974%E6%B5%8B%E8%AF%95%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2×4测试法
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--核心概念"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/DCF%E4%BC%B0%E5%80%BC%E5%AE%9E%E6%93%8D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DCF估值实操
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/Sidecar%E6%8A%95%E8%B5%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sidecar投资
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/UU%E6%8A%95%E8%B5%84%E7%8E%AF%E5%A2%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UU投资环境
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E4%B8%8D%E4%B8%BA%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不为清单
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E4%B8%8D%E5%AF%B9%E7%A7%B0%E6%8A%BC%E6%B3%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不对称押注
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--核心概念"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E4%B9%B0%E5%85%A5%E4%BB%B7%E6%A0%BC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    买入价格
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E4%BA%92%E8%A1%A5%E6%8A%80%E8%83%BD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    互补技能
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E4%BD%8E%E4%BC%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    低估
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E4%BD%8E%E9%A3%8E%E9%99%A9%E9%AB%98%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    低风险高不确定性
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--核心概念"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%86%85%E5%9C%A8%E4%BB%B7%E5%80%BC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    内在价值
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%87%AF%E5%88%A9%E5%85%AC%E5%BC%8F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    凯利公式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%88%86%E6%95%A3%E6%8A%95%E8%B5%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分散投资
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%8F%97%E6%89%98%E4%BA%BA%E8%B4%A3%E4%BB%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    受托人责任
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%90%88%E7%90%86%E9%A2%84%E6%9C%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    合理预期
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%91%A8%E6%9C%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    周期
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%9B%9B%E4%B8%AA%E4%B8%8D%E4%BE%9D%E8%B5%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    四个不依赖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%A4%8D%E5%88%A9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复利
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%AE%89%E5%85%A8%E8%BE%B9%E9%99%85/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全边际
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%AE%B9%E9%94%99%E8%83%BD%E5%8A%9B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    容错能力
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%AF%B9%E5%86%B2%E6%80%9D%E7%BB%B4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    对冲思维
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%B0%91%E6%8A%BC%E6%B3%A8%E9%87%8D%E6%8A%BC%E6%B3%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    少押注重押注
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--核心概念"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%B8%82%E5%9C%BA%E5%85%88%E7%94%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    市场先生
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E5%B8%82%E5%9C%BA%E9%A2%84%E6%B5%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    市场预测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E6%86%A8%E5%A4%BA%E5%9E%8B%E6%8A%95%E8%B5%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    憨夺型投资
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E6%8A%A4%E5%9F%8E%E6%B2%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    护城河
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E6%8B%92%E7%BB%9D%E7%9A%84%E8%89%BA%E6%9C%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    拒绝的艺术
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E6%8D%9F%E5%A4%B1%E8%A7%84%E9%81%BF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    损失规避
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E6%9C%89%E6%95%88%E5%B8%82%E5%9C%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    有效市场
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E6%9C%9F%E6%9C%9B%E5%80%BC%E6%80%9D%E7%BB%B4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期望值思维
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E6%B0%B8%E4%B9%85%E6%8C%81%E6%9C%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    永久持有
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E7%AC%AC%E4%BA%8C%E5%B1%82%E6%AC%A1%E6%80%9D%E7%BB%B4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二层次思维
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E8%83%BD%E5%8A%9B%E5%9C%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    能力圈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E8%95%83%E8%A1%8D%E5%99%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    蕃衍器（Spawner）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E5%BE%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    贝叶斯定律
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E8%B4%AD%E4%B9%B0%E5%8A%9B%E6%AF%94%E4%BE%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    购买力比例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E8%B5%84%E4%BA%A7%E9%85%8D%E7%BD%AE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    资产配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E9%80%86%E5%90%91%E6%8A%95%E8%B5%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆向投资
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E9%92%9F%E6%91%86%E6%84%8F%E8%AF%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    钟摆意识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E9%95%BF%E6%9C%9F%E6%8A%95%E8%B5%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    长期投资
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E9%95%BF%E6%9C%9F%E6%8C%81%E6%9C%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    长期持有
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E9%97%B4%E6%96%AD%E5%B9%B3%E8%A1%A1%E6%8A%95%E8%B5%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    间断平衡投资
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E9%98%B2%E5%AE%88%E5%9E%8B%E6%8A%95%E8%B5%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    防守型投资
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E9%9A%90%E5%90%AB%E5%9B%9E%E6%8A%A5%E7%8E%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    隐含回报率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E9%9B%86%E4%B8%AD%E6%8A%95%E8%B5%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    集中投资
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    风险管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E9%BB%91%E5%A4%A9%E9%B9%85/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    黑天鹅
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    投资者概念
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    投资者概念
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PDCA%E7%AE%A1%E7%90%86%E5%BE%AA%E7%8E%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDCA管理循环
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%80%E8%87%B4%E6%80%A7%E5%80%BE%E5%90%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    一致性倾向
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BA%BA%E7%B1%BB%E8%AF%AF%E5%88%A4%E5%BF%83%E7%90%86%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人类误判心理学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%86%85%E5%9C%A8%E8%AE%B0%E5%88%86%E5%8D%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    内在记分卡
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--核心概念"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%89%A5%E7%9A%AE%E6%95%88%E5%BA%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    剥皮效应
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8E%8B%E5%8A%9B%E5%BD%B1%E5%93%8D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    压力影响
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8F%8C%E6%9B%B2%E8%B4%B4%E7%8E%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    双曲贴现
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8F%8D%E4%BA%8B%E5%AE%9E%E6%80%9D%E7%BB%B4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    反事实思维
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8F%AF%E7%94%A8%E6%80%A7%E5%90%AF%E5%8F%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    可用性启发
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%A2%9E%E9%95%BF%E8%A6%81%E7%B4%A0%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    增长要素模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%A2%9E%E9%95%BF%E9%A3%9E%E8%BD%AE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    增长飞轮
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%A4%84%E7%BD%AE%E6%95%88%E5%BA%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    处置效应
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AE%89%E7%B4%A2%E5%A4%AB%E7%9F%A9%E9%98%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安索夫矩阵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AE%BD%E6%A1%86%E6%9E%B6%E6%80%9D%E7%BB%B4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    宽框架思维
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AF%B9%E6%AF%94%E5%8F%8D%E5%BA%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    对比反应
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%B3%B0%E7%BB%88%E5%AE%9A%E5%BE%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    峰终定律
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%B9%B8%E5%AD%98%E8%80%85%E5%81%8F%E8%AF%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    幸存者偏误
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%BB%89%E4%BB%B7%E4%B8%83%E6%88%90%E6%80%9D%E7%BB%B4%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    廉价七成思维法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%81%A8%E7%9A%84%E5%80%BE%E5%90%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    恨的倾向
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%84%9F%E5%AE%98%E8%AF%AF%E5%B7%AE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    感官误差
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%8A%95%E8%B5%84%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    投资检查清单
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%8D%9F%E5%A4%B1%E5%8E%8C%E6%81%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    损失厌恶
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E8%AF%8D%E7%90%86%E8%A7%A3%E5%81%8F%E5%B7%AE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数词理解偏差
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%9D%83%E5%A8%81%E5%BD%B1%E5%93%8D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    权威影响
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A1%86%E5%AE%9A%E5%81%8F%E5%B7%AE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    框定偏差
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A6%82%E7%8E%87%E6%80%9D%E7%BB%B4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概率思维
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A8%A1%E7%B3%8A%E6%80%A7%E8%A7%84%E9%81%BF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模糊性规避
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BF%80%E5%8A%B1%E6%9C%BA%E5%88%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    激励机制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    熵减力
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    熵减力
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        理论基础：热力学第二定律
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="理论基础：热力学第二定律">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵的概念
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        耗散结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        大自然的启示
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵减三法则
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="熵减三法则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        法则一：远离平衡
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        法则二：更加开放
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        法则三：突变式发展
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵减与失控的关系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="熵减与失控的关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KK失控理论的局限
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵减与失控的统一
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        华为的熵减实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="华为的熵减实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        郡县制 vs 诸侯制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵减的代价
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵减的意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵减力与投资
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="熵减力与投资">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵减力评估清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵减力与估值
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵减力与护城河、进化力的关系
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵减的适用性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="熵减的适用性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵减理论适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        熵减的时机与力度
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        原文精选
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        相关概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%88%B1%E7%9A%84%E5%80%BE%E5%90%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    爱的倾向
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A0%94%E7%A9%B6%E6%96%B9%E6%B3%95%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    研究方法论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A4%BE%E4%BC%9A%E8%AE%A4%E5%90%8C%E5%80%BE%E5%90%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    社会认同倾向
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%80%E8%B5%8B%E6%95%88%E5%BA%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    禀赋效应
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一性原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%87%AA%E8%A7%86%E8%BF%87%E9%AB%98%E5%80%BE%E5%90%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自视过高倾向
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A8%E5%8E%8C%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    讨厌不确定性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%BF%87%E5%BA%A6%E8%87%AA%E4%BF%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    过度自信
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%BF%9B%E5%8C%96%E5%8A%9B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进化力
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%87%8D%E8%A7%86%E7%90%86%E7%94%B1%E5%80%BE%E5%90%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    重视理由倾向
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%94%99%E8%AF%AF%E7%90%86%E8%A7%A3%E7%B3%BB%E7%BB%9F%E6%80%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    错误理解系统性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%94%99%E8%AF%AF%E7%9A%84%E5%9B%A0%E6%9E%9C%E5%85%B3%E7%B3%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    错误的因果关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    知名投资人
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    知名投资人
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E5%90%8D%E6%8A%95%E8%B5%84%E4%BA%BA/%E5%A1%94%E5%8B%92%E5%B8%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    塔勒布
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E5%90%8D%E6%8A%95%E8%B5%84%E4%BA%BA/%E5%B7%B4%E8%8F%B2%E7%89%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    巴菲特
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E5%90%8D%E6%8A%95%E8%B5%84%E4%BA%BA/%E5%B8%95%E4%BC%AF%E8%8E%B1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    帕伯莱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E5%90%8D%E6%8A%95%E8%B5%84%E4%BA%BA/%E6%99%AE%E6%8B%89%E8%90%A8%E5%BE%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    普拉萨德
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E5%90%8D%E6%8A%95%E8%B5%84%E4%BA%BA/%E6%9D%8E%E5%BD%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    李录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E5%90%8D%E6%8A%95%E8%B5%84%E4%BA%BA/%E6%A0%BC%E9%9B%B7%E5%8E%84%E5%A7%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    格雷厄姆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E5%90%8D%E6%8A%95%E8%B5%84%E4%BA%BA/%E6%AE%B5%E6%B0%B8%E5%B9%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    段永平
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E5%90%8D%E6%8A%95%E8%B5%84%E4%BA%BA/%E6%B3%BD%E5%85%8B%E8%B1%AA%E6%B3%BD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    泽克豪泽
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E5%90%8D%E6%8A%95%E8%B5%84%E4%BA%BA/%E8%8A%92%E6%A0%BC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    芒格
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E5%90%8D%E6%8A%95%E8%B5%84%E4%BA%BA/%E9%82%93%E6%99%93%E5%B3%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    邓晓峰
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E5%90%8D%E6%8A%95%E8%B5%84%E4%BA%BA/%E9%9C%8D%E5%8D%8E%E5%BE%B7%C2%B7%E9%A9%AC%E5%85%8B%E6%96%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    霍华德·马克斯
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    财务概念
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    财务概念
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/ROE%E4%B8%8EROIC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROE与ROIC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E4%BC%B0%E5%80%BC%E6%8C%87%E6%A0%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    估值指标
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E5%9B%9E%E8%B4%AD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    回购（Share Buyback）
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E5%B8%82%E7%9B%88%E7%8E%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    市盈率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E6%89%80%E6%9C%89%E8%80%85%E7%9B%88%E4%BD%99/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    所有者盈余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E6%9C%BA%E4%BC%9A%E6%88%90%E6%9C%AC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    机会成本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E6%9D%9C%E9%82%A6%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杜邦分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E7%95%99%E5%AD%98%E6%94%B6%E7%9B%8A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    留存收益
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E8%82%A1%E6%81%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    股息
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E8%87%AA%E7%94%B1%E7%8E%B0%E9%87%91%E6%B5%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自由现金流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    财务报表分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E8%B4%A2%E5%8A%A1%E9%80%A0%E5%81%87%E8%AF%86%E5%88%AB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    财务造假识别
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E8%B4%A6%E9%9D%A2%E4%BB%B7%E5%80%BC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    账面价值
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B4%A2%E5%8A%A1%E6%A6%82%E5%BF%B5/%E9%80%8F%E8%A7%86%E7%9B%88%E4%BD%99/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    透视盈余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>熵减力</h1>
+
+<blockquote>
+<p>把进化潜力变为现实的能力，来源于热力学第二定律，通过"熵减三法则"（远离平衡、开放、突变）保持组织活力。</p>
+</blockquote>
+<h2 id="_1">核心定义</h2>
+<p><strong>熵减力</strong>：熵减能力弱的公司，走着走着就散了；熵减能力强的公司，公司总是充满活力。这种保持组织活力的能力叫"熵减力"。</p>
+<p><strong>李国飞原话</strong>：</p>
+<blockquote>
+<p>"熵减能力弱的公司，走着走着就散了，熵减能力强的公司，公司总是充满活力，这样的一种能力，我命名为'熵减力'，熵减力决定着公司的活力，公司的活力决定公司的生死。"</p>
+</blockquote>
+<h2 id="_2">理论基础：热力学第二定律</h2>
+<h3 id="_3">熵的概念</h3>
+<p><strong>熵</strong>：热力学第二定律的概念，用于度量系统的混乱程度。</p>
+<p><strong>规律</strong>：
+- 大自然任何时候都是高温向低温转移
+- 封闭系统中，熵必然增加
+- 系统从井然有序走向混乱无序
+- 最终"熵死"——毫无生机、死气沉沉</p>
+<p><strong>通俗理解</strong>：</p>
+<blockquote>
+<p>"一个人从年青力壮走向衰老，最终死亡，就是熵增，谁也不想，但这是必然趋势，熵减就是返老还童，起死回生。"</p>
+</blockquote>
+<h3 id="_4">耗散结构</h3>
+<p><strong>提出者</strong>：伊里亚·普里戈金（1977年诺贝尔化学奖）</p>
+<p><strong>定义</strong>：远离平衡的开放系统，通过持续与外界交换物质和能量，熵减少，系统从无序变为有序。</p>
+<p><strong>三大特征</strong>：
+1. <strong>远离平衡</strong>：不是静态稳定，而是动态平衡
+2. <strong>开放</strong>：与外界充分交换
+3. <strong>非线性发展</strong>：成长曲线阶段性陡峭，可能突变</p>
+<h3 id="_5">大自然的启示</h3>
+<blockquote>
+<p>"宇宙总的趋势是熵增，眼前那些美好的事物总会破败，火会熄灭，肉会腐烂，木屋会塌，人会老死。但是，每天都有新的山脉岛屿形成，每年春天植物总会发出新芽，婴儿哇哇哭着来到这个世界。"</p>
+</blockquote>
+<p><strong>原因</strong>：大自然是一个开放性的耗散系统
+- 太阳输送热能
+- 大气流动
+- 水循环
+- 光合作用
+- 持续熵减维持活力</p>
+<p><strong>任正非的领悟</strong>：
+- 自然科学与社会科学有相同规律
+- 企业也必然从有序走向混乱并消亡
+- 华为要建立耗散型结构，持续提升活力</p>
+<h2 id="_6">熵减三法则</h2>
+<table>
+<thead>
+<tr>
+<th>法 则</th>
+<th>含 义</th>
+<th>企业实践</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>远离平衡</strong></td>
+<td>打破业务、组织、人员的稳定状态</td>
+<td>持续开拓新业务、内部赛马、部门整合</td>
+</tr>
+<tr>
+<td><strong>更加开放</strong></td>
+<td>充分与外界交换人才、技术、信息</td>
+<td>外部人才引进、校企合作、市场竞争</td>
+</tr>
+<tr>
+<td><strong>突变式发展</strong></td>
+<td>集中资源把握重大机遇</td>
+<td>战略研发投入、重大机遇全力攻关</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">法则一：远离平衡</h3>
+<p><strong>1. 持续开拓新业务</strong></p>
+<p>任正非：</p>
+<blockquote>
+<p>"财富绝对不是个很好的东西，要尽快以研发的方式消耗出去以提升企业的势能。"</p>
+</blockquote>
+<ul>
+<li>不开拓新业务→熵增如影随形</li>
+<li>新业务→打破结构稳定→输入新物质能量</li>
+<li>位置就这么多→有能力员工晋升受阻→士气下降</li>
+</ul>
+<p><strong>三种新业务类型</strong>：
+- <strong>垂直拓展</strong>：低端芯片→高端芯片，内销→出口
+- <strong>上下游拓展</strong>：组装电脑→生产主板
+- <strong>横向拓展</strong>：即时通讯→拍电影</p>
+<p><strong>2. 加大技术研发</strong></p>
+<p>华为2018年数据：
+- 研发费用：<strong>1015亿元</strong>
+- 占销售收入：<strong>14.1%</strong>
+- 近十年累计：<strong>超4800亿元</strong>
+- 2018年专利申请量：<strong>全球第一</strong>（5405份）</p>
+<p><strong>3. 内部赛马机制</strong></p>
+<blockquote>
+<p>"与其让竞争对手把自己颠覆了，还不如自己把自己颠覆。"</p>
+</blockquote>
+<ul>
+<li>华为：多路径、多梯次、饱和攻击</li>
+<li>腾讯：微信、王者荣耀是赛马成果</li>
+<li>但不是所有项目都适合赛马</li>
+</ul>
+<p><strong>4. 部门整合</strong></p>
+<p>阿里案例：
+- 每年组织架构调整
+- 员工三年换七八个部门、五六个老板
+- "形势变得太快，竞争变得太快，社会变得太快，组织一定要做到最佳效率"</p>
+<h3 id="_8">法则二：更加开放</h3>
+<p><strong>1. 人力资源的开放</strong></p>
+<p><strong>华为实践</strong>：
+- 不断引进高端人才
+- 末位淘汰制
+- 年轻化管理层
+- "烧不死的是凤凰"</p>
+<p><strong>2. 技术的开放</strong></p>
+<ul>
+<li>与国际顶尖高校合作</li>
+<li>参与国际标准制定</li>
+<li>开放式创新</li>
+</ul>
+<p><strong>3. 组织的开放</strong></p>
+<ul>
+<li>打破部门壁垒</li>
+<li>数据打通共享</li>
+<li>跨部门协作机制</li>
+</ul>
+<h3 id="_9">法则三：突变式发展</h3>
+<p><strong>定义</strong>：管理层对未来要有预见性，一旦觉察重大机遇爆发点，要敢于集中资源出击，促进公司突变式发展。</p>
+<p><strong>关键要素</strong>：
+1. <strong>预见性</strong>：识别战略级机会
+2. <strong>决断力</strong>：敢于押注
+3. <strong>执行力</strong>：集中资源强攻</p>
+<p><strong>案例</strong>：
+- 阿里达摩院：三年投入1000亿元
+- 华为5G：押注成功
+- 字节跳动算法：全力攻关</p>
+<p><strong>腾讯的教训</strong>：
+- 算法技术是突变机会
+- 但没有全力攻关
+- 反而自我设限</p>
+<h2 id="_10">熵减与失控的关系</h2>
+<h3 id="kk">KK失控理论的局限</h3>
+<p>KK本人2013年承认：</p>
+<blockquote>
+<p>"失控虽然是事物起始的最佳模式，也会引领事物以超过我们预期的方式发展，但它并不能完全做到有始有终……最终人们希望在这个自下而上的系统中添加领导力和控制的元素。"</p>
+</blockquote>
+<p><strong>KK没发现的关键</strong>：
+- 大自然资源取之不尽，企业资源有限
+- 公司需要为失控式进化合理安排资源
+- 公司需要提升失控式进化的成功概率</p>
+<h3 id="_11">熵减与失控的统一</h3>
+<p><strong>李国飞的洞见</strong>：</p>
+<blockquote>
+<p>"大自然首先是一个耗散性的系统，之所以能失控式进化，是由于它天然地具备了远离平衡、开放和非线性发展这三个特性，也就是说这些是前提条件。"</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>对比</th>
+<th>失控理论</th>
+<th>熵减理论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>核心</strong></td>
+<td>进化的方式</td>
+<td>进化的前提</td>
+</tr>
+<tr>
+<td><strong>关注</strong></td>
+<td>如何失控</td>
+<td>如何控制</td>
+</tr>
+<tr>
+<td><strong>关系</strong></td>
+<td>失控是结果</td>
+<td>控制（熵减）是前提</td>
+</tr>
+</tbody>
+</table>
+<p><strong>总结</strong>：</p>
+<blockquote>
+<p>"失控只是进化的结果，而控制所导致的熵减，则是进化的前提。"</p>
+</blockquote>
+<h2 id="_12">华为的熵减实践</h2>
+<h3 id="vs">郡县制 vs 诸侯制</h3>
+<p><strong>阿里"郡县制"（核心：不稳定）</strong>：
+- 所有名将功臣没有稳定地盘
+- 年复一年被调往各处轮岗
+- 迫使管理层持续奋斗
+- 大中台深度整合数据和能力</p>
+<p><strong>腾讯"诸侯制"（核心：稳定）</strong>：
+- BG设置很稳定
+- 领导任职数年稳定
+- 员工岗位比较稳定
+- 技术和数据各自为政</p>
+<p><strong>对比</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>阿里郡县制</th>
+<th>腾讯诸侯制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>流量红利期</td>
+<td>表现好</td>
+<td>表现好</td>
+</tr>
+<tr>
+<td>红利消失后</td>
+<td>继续逼人奋斗</td>
+<td>容易让人松懈</td>
+</tr>
+<tr>
+<td>中台能力</td>
+<td>深度整合</td>
+<td>各筑高墙</td>
+</tr>
+<tr>
+<td>代表公司</td>
+<td>字节跳动也用</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13">熵减的代价</h3>
+<p><strong>华为员工的处境</strong>：
+- 极高压力，内部竞争比外部更激烈
+- 每年各种业绩排名
+- 一旦松懈就要告别
+- "只有最坚定的奋斗者才可以生存"</p>
+<p><strong>任正非的痛苦</strong>：
+- 2001年写《华为的冬天》
+- 曾患严重忧郁症，多次想自杀
+- 要给十几万人做熵减
+- "你能给十几万人持续做熵减吗？"</p>
+<blockquote>
+<p>"白天你激情万丈，午夜梦回，柔软的内心战战兢兢。"</p>
+</blockquote>
+<h3 id="_14">熵减的意义</h3>
+<p><strong>为什么华为人愿意承受痛苦？</strong></p>
+<blockquote>
+<p>"他们相信，他们正为一个伟大的使命而奋斗！痛苦算得了什么？正是这种使命感，让他们愿意承受这种痛苦。每一次征战胜利时，在欢呼中他们享受一种非凡的成就感。"</p>
+</blockquote>
+<p><strong>使命感 vs 物质激励</strong>：
+- 物质是基础
+- 使命感是动力
+- 凡是不相信的，都已经离开
+- 坚持下来的，都很坚定</p>
+<h2 id="_15">熵减力与投资</h2>
+<h3 id="_16">熵减力评估清单</h3>
+<table>
+<thead>
+<tr>
+<th>评估维度</th>
+<th>具体指标</th>
+<th>与长期价值关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>研发投入</strong></td>
+<td>研发费用占比、绝对值</td>
+<td>高</td>
+</tr>
+<tr>
+<td><strong>人才激励</strong></td>
+<td>薪酬竞争力、股权激励</td>
+<td>高</td>
+</tr>
+<tr>
+<td><strong>新业务</strong></td>
+<td>新产品研发计划、新业务开展情况</td>
+<td>高</td>
+</tr>
+<tr>
+<td><strong>组织活力</strong></td>
+<td>内部赛马、轮岗机制</td>
+<td>中</td>
+</tr>
+<tr>
+<td><strong>开放程度</strong></td>
+<td>外部人才引进、校企合作</td>
+<td>中</td>
+</tr>
+<tr>
+<td><strong>领导层</strong></td>
+<td>使命感、愿力、培养计划</td>
+<td>高</td>
+</tr>
+<tr>
+<td><strong>年轻人占比</strong></td>
+<td>管理层的年轻化程度</td>
+<td>中</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_17">熵减力与估值</h3>
+<p><strong>熵减力强的公司</strong>：
+- ✅ 生机勃勃
+- ✅ 核心竞争力强
+- ✅ 潜力容易变为现实
+- ✅ 估值可以更高</p>
+<p><strong>熵减力弱的公司</strong>：
+- ❌ 活力逐渐丧失
+- ❌ 护城河慢慢变窄
+- ❌ 估值要大打折扣</p>
+<h2 id="_18">熵减力与护城河、进化力的关系</h2>
+<pre><code>┌─────────────────────────────────────────┐
+│          价值投资三维度                 │
+├─────────────────────────────────────────┤
+│                                         │
+│  护城河 ←───────────────────→ 进化力   │
+│  (今天)                      (潜力)    │
+│    ↑                           ↑       │
+│    │                           │       │
+│    └───────── 熵减力 ─────────┘       │
+│           (实现能力)                    │
+│                                         │
+└─────────────────────────────────────────┘
+</code></pre>
+<p><strong>关系总结</strong>：
+- 进化力是成长潜力
+- 熵减力是把潜力变为现实的能力
+- 熵减力强→护城河越建越宽
+- 熵减力弱→护城河慢慢变窄</p>
+<h2 id="_19">熵减的适用性</h2>
+<h3 id="_20">熵减理论适用场景</h3>
+<p><strong>适合借鉴熵减的公司</strong>：
+- 有实力的大中型公司
+- 互联网公司（资金、人才、技术充裕）
+- 缺乏活力的传统公司</p>
+<p><strong>谨慎借鉴的情况</strong>：
+- 小公司（资源有限）
+- 处于高速增长期的公司
+- 已有强大熵减机制的公司</p>
+<h3 id="_21">熵减的时机与力度</h3>
+<p>华为的经验：
+- 不同阶段做法不同
+- 小公司也有熵减的必要性
+- 但方式和强度要匹配实际情况</p>
+<h2 id="_22">原文精选</h2>
+<blockquote>
+<p>"熵减能力弱的公司，走着走着就散了，熵减能力强的公司，公司总是充满活力，这样的一种能力，我命名为'熵减力'，熵减力决定着公司的活力，公司的活力决定公司的生死。"</p>
+<p>"熵减是好，但是组织实施的领导人的压力非常大，可能是员工的很多倍。为什么呢？因为他也是人，他也会松懈，他也要给自己做熵减，把必然丧失的活力反复激活。"</p>
+<p>"痛苦算得了什么？正是这种使命感，让他们愿意承受这种痛苦。每一次征战胜利时，在欢呼中他们享受一种非凡的成就感，这是一种类似宗教的体验。"</p>
+</blockquote>
+<h2 id="_23">相关概念</h2>
+<ul>
+<li><a href="../%E8%BF%9B%E5%8C%96%E5%8A%9B/">进化力</a>] — 进化的潜力</li>
+<li><a href="../../%E6%8A%95%E8%B5%84%E6%A6%82%E5%BF%B5/%E6%8A%A4%E5%9F%8E%E6%B2%B3/">护城河</a>] — 企业竞争优势</li>
+<li><a href="../../%E5%95%86%E4%B8%9A%E6%A6%82%E5%BF%B5/%E4%BC%81%E4%B8%9A%E6%96%87%E5%8C%96/">企业文化</a>] — 组织活力的软性因素</li>
+<li>李国飞_价值投资三个维度 — 完整演讲报告</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
